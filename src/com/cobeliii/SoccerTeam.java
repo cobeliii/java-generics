@@ -3,7 +3,7 @@ package com.cobeliii;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseballTeam implements Team{
+public class SoccerTeam implements Team{
     private String teamName;
     private List<Player> teamMembers;
 
@@ -11,7 +11,7 @@ public class BaseballTeam implements Team{
     private int totalLosses;
     private int totalDraws;
 
-    public BaseballTeam(String teamName) {
+    public SoccerTeam(String teamName) {
         this.teamName = teamName;
         this.teamMembers = new ArrayList<>();
         this.totalWins = 0;
