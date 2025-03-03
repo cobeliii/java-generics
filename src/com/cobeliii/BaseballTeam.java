@@ -3,7 +3,7 @@ package com.cobeliii;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseballTeam implements Team{
+public class BaseballTeam implements PlayerInterface{
     private String teamName;
     private List<Player> teamMembers;
 
@@ -19,25 +19,25 @@ public class BaseballTeam implements Team{
         this.totalDraws = 0;
     }
 
-    @Override
+
     public void addTeamMember(Player player) {
         if (!teamMembers.contains(player)) {
             teamMembers.add(player);
         }
     }
 
-    @Override
+
     public void listTeamMembers() {
         System.out.println(teamName + " Roster:");
         System.out.println(teamMembers);
     }
 
-    @Override
+
     public int ranking(){
         return (totalLosses * 2) + totalDraws + 1;
     }
 
-    @Override
+
     public String setScore(int ourScore, int theirScore) {
         String message = "lost to";
         if (ourScore > theirScore) {
